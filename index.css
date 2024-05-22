@@ -1,0 +1,183 @@
+/* Comment Code */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+  }
+
+.stars {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    max-width: auto;
+    height: 100%;
+    background-color: #000;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkle 1s infinite;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.change_content::after{
+    content: "";
+    animation: changetext 4s infinite linear;
+    color: white;
+}
+
+@keyframes changetext{
+    0%{content: "Frontend Developer";}
+    50%{content: "Backend Developer";}
+    100%{content: "Wordpress Developer";}
+}
+
+.aboutme{
+    height: 100%;
+    width: 100%;
+}
+
+.aboutcenter{
+    width: 150px;
+    height: 4px;
+    background-color: black;
+}
+
+.about{
+    font-size: 22px;
+    word-break: keep-all;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+.loading-animation {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff; /* background color */
+    z-index: 9999; /* Make sure it's above everything else */
+    /* Additional styling for animation */
+}
+
+/* Comment Code */
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Initial shadow */
+    transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition */
+    overflow: hidden; /* Hide overflow content */
+  
+    /* Animation */
+    animation: animateShadow 2s infinite alternate;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+    transform: translateY(-5px); /* Move card slightly up on hover */
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  @keyframes animateShadow {
+    0% {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Initial shadow */
+    }
+    100% {
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.4); /* Animated shadow */
+    }
+  }
+  
+  .mail{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .footerBG{
+    background-image: url('https://img.freepik.com/free-photo/top-view-workspace-with-copy-space-succulent_23-2148430827.jpg?w=740&t=st=1710362861~exp=1710363461~hmac=e0828291cc439e7e41378a14efafa3436b8e628de1c670e234922b5d873b73ee');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    width: 100%;
+  }
+  
+  #mine_photo{
+    box-shadow: 0  16px 20px rgba(7, 7, 7, 10), 0 6px 20px 0 rgba(0, 0, 0, 10) !important;
+  }
+
+  .hovering:hover{
+    text-decoration: underline;
+    box-shadow: 0 10px 50px whitesmoke, 0 2px 10px 0 wheat !important;
+    border-radius: 30%;
+    text-decoration: none;
+  }
+
+
+
+
+/* 
+@media only screen and (max-width: 850px) {
+    .stars {
+      background-color: #000;
+      height: 100%;
+      max-width: auto;
+    } 
+  } */
+
+@media only screen and (min-width: 369px){
+    html, body{
+        background-color: white;
+        /* height: auto; */
+        max-width: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .meri_image{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+  #about_me{
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 396px) {
+  #mine_photo{
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1221px) {
+  .meri_image{
+    height: 565px;
+  }
+}
